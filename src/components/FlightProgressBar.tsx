@@ -1,6 +1,7 @@
 "use client";
 
 import { useFlightProgressBar } from "../hoks/useFlightProgressBar.ts";
+import FlightIcon from "./FlightIcon.tsx";
 
 type FlightProgressBarProps = {
   totalDistance: number;
@@ -30,16 +31,19 @@ export default function FlightProgressBar({
 
   return (
     <div
-      className="relative self-center w-full h-1 bg-gray-200 rounded"
+      className="relative self-center w-full h-0.5 bg-neutral-600 rounded"
       ref={barRef}
     >
       <div
-        className="absolute top-0 left-0 h-full bg-blue-500 rounded"
-        style={{ width: `${safeVisualWidthPercent}%` }}
+        className="absolute top-0 left-0 h-full rounded"
+        style={{
+          width: `${safeVisualWidthPercent}%`,
+          background: "linear-gradient(to right, #8b0000, #ff8c00, #f0e68c)",
+        }}
       />
 
       <div
-        className="absolute top-0 -translate-x-1/2 cursor-pointer"
+        className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 cursor-pointer rotate-[45deg]"
         style={{ left: `${safeVisualWidthPercent}%` }}
         onPointerDown={handlePointerDown}
         onKeyDown={handleKeyDown}
@@ -51,7 +55,7 @@ export default function FlightProgressBar({
         aria-valuetext={`Пролетели ${Math.round(internalElapsed)} из ${totalDistance} километров`}
         tabIndex={0}
       >
-        ✈️
+        <FlightIcon />
       </div>
     </div>
   );
