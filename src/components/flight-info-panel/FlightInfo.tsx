@@ -5,10 +5,10 @@ const FlightInfo = () => {
         Flight information
       </h3>
       <div className={"flex flex-row gap-x-0.5 text-xs"}>
-        <div className={"bg-neutral-800 flex-1 p-1"}>
+        <div className={"bg-neutral-800 flex-1 p-2"}>
           <p>Boeing 737-800</p>
         </div>
-        <div className={"flex flex-row bg-neutral-800 flex-1 p-1"}>
+        <div className={"flex flex-row bg-neutral-800 flex-1 p-2"}>
           <p>ICON</p>
           <p>Ireland</p>
         </div>
@@ -16,7 +16,7 @@ const FlightInfo = () => {
       <div className={"flex flex-row gap-x-0.5 text-xs"}>
         <div
           className={
-            "flex flex-row bg-neutral-800 rounded-bl-md flex-1 p-1 justify-between"
+            "flex flex-row bg-neutral-800 rounded-bl-md flex-1 p-2 justify-between"
           }
         >
           <p className={"text-gray-400"}>Speed</p>
@@ -24,7 +24,7 @@ const FlightInfo = () => {
         </div>
         <div
           className={
-            "flex flex-row bg-neutral-800 rounded-br-md flex-1 p-1 justify-between"
+            "flex flex-row bg-neutral-800 rounded-br-md flex-1 p-2 justify-between"
           }
         >
           <p className={"text-gray-400"}>Altitude</p>
