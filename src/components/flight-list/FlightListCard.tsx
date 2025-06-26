@@ -3,7 +3,7 @@ import FlightCard from "./FlightCard.tsx";
 
 const FlightListCard = () => {
   return (
-    <div className={"w-sm m-8 space-y-4 min-w-fit"}>
+    <div className={"w-sm space-y-4 min-w-fit"}>
       {FLIGTHS_DATA.map((flight) => (
         <FlightCard key={flight.airline} flight={flight} />
       ))}

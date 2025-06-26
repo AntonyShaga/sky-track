@@ -3,7 +3,7 @@ import FlightInfoPanel from "./components/flight-info-panel/FlightInfoPanel.tsx"
 
 export function Home() {
   return (
-    <h1 className={"container mx-auto flex justify-between"}>
+    <h1 className={" mx-auto flex justify-between py-10"}>
       <FlightListCard />
       <FlightInfoPanel />
     </h1>
