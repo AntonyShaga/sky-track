@@ -2,6 +2,46 @@ import type { FlightData } from "../../type/FlightData.ts";
 
 export const FLIGTHS_DATA: FlightData[] = [
   {
+    flightNumber: "PQ101",
+    airline: "SkyUp Airlines",
+    airlineIconUrl: "https://logo.clearbit.com/skyup.aero",
+    aircraftImageUrl: "/aircrafts/sky-up-airlines.png",
+    aircraftReg: "UR-SKY",
+    from: {
+      code: "IEV",
+      city: "Київ",
+      timezone: "UTC+2",
+    },
+    to: {
+      code: "LWO",
+      city: "Львів",
+      timezone: "UTC+2",
+    },
+    progress: {
+      totalDistanceKm: 468,
+      totalDuration: "1h 05m",
+      completedDistanceKm: 245,
+      completedDuration: "32m",
+    },
+    schedule: {
+      departure: {
+        planned: "10:00",
+        actual: "10:12",
+      },
+      arrival: {
+        planned: "11:05",
+        estimated: "11:07",
+      },
+    },
+    aircraft: {
+      model: "Boeing 737-800",
+      country: "Ukraine",
+      countryFlag: "🇺🇦",
+    },
+    speed: "820 km/h",
+    altitude: "10 800 m",
+  },
+  {
     flightNumber: "RN7480",
     airline: "Ryanair",
     airlineIconUrl: "https://logo.clearbit.com/ryanair.com",

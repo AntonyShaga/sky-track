@@ -1,4 +1,5 @@
 import type { AircraftInfo } from "../../type/FlightData.ts";
+import { CountryFlag } from "./CountryFlagProps.tsx";
 
 interface Props {
   speed: string;
@@ -14,11 +15,13 @@ export function FlightInfo({ speed, altitude, aircraft }: Props) {
         Flight information
       </h3>
       <div className={"flex flex-row gap-x-0.5 text-xs"}>
-        <div className={"bg-neutral-800 flex-1 p-2"}>
+        <div className={"flex items-center bg-neutral-800 flex-1 p-2"}>
           <p>{model}</p>
         </div>
-        <div className={"flex flex-row bg-neutral-800 flex-1 p-2"}>
-          <p>{countryFlag}</p>
+        <div className={"flex gap-2 items-center bg-neutral-800 flex-1 p-2"}>
+          <p className={"flex items-center w-6 h-6"}>
+            <CountryFlag code={countryFlag} />
+          </p>
           <p>{country}</p>
         </div>
       </div>
@@ -33,7 +36,7 @@ export function FlightInfo({ speed, altitude, aircraft }: Props) {
         </div>
         <div
           className={
-            "flex flex-row bg-neutral-800 rounded-br-md flex-1 p-2 justify-between"
+            "flex items-center bg-neutral-800 rounded-br-md flex-1 p-2 justify-between"
           }
         >
           <p className={"text-gray-400"}>Altitude</p>
