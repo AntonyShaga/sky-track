@@ -5,8 +5,7 @@ export const FLIGTHS_DATA: FlightData[] = [
     flightNumber: "RN7480",
     airline: "Ryanair",
     airlineIconUrl: "https://logo.clearbit.com/ryanair.com",
-    aircraftImageUrl:
-      "https://content.airhex.com/images/aircraft/boeing-737-800.png",
+    aircraftImageUrl: "/aircrafts/ryanair-737max.png",
     aircraftReg: "D-MNOP",
     from: {
       code: "DUB",
@@ -46,8 +45,7 @@ export const FLIGTHS_DATA: FlightData[] = [
     flightNumber: "LH1234",
     airline: "Lufthansa",
     airlineIconUrl: "https://logo.clearbit.com/lufthansa.com",
-    aircraftImageUrl:
-      "https://content.airhex.com/images/aircraft/airbus-a320.png",
+    aircraftImageUrl: "/aircrafts/lufthansa-737max.png",
     aircraftReg: "D-AILU",
     from: { code: "FRA", city: "Frankfurt", timezone: "UTC+1" },
     to: { code: "JFK", city: "New York", timezone: "UTC-5" },
@@ -73,8 +71,7 @@ export const FLIGTHS_DATA: FlightData[] = [
     flightNumber: "AF452",
     airline: "Air France",
     airlineIconUrl: "https://logo.clearbit.com/airfrance.com",
-    aircraftImageUrl:
-      "https://content.airhex.com/images/aircraft/boeing-777.png",
+    aircraftImageUrl: "/aircrafts/air-france.png",
     aircraftReg: "F-GSQI",
     from: { code: "CDG", city: "Paris", timezone: "UTC+1" },
     to: { code: "GRU", city: "São Paulo", timezone: "UTC-3" },
@@ -100,8 +97,7 @@ export const FLIGTHS_DATA: FlightData[] = [
     flightNumber: "AC789",
     airline: "Air Canada",
     airlineIconUrl: "https://logo.clearbit.com/aircanada.com",
-    aircraftImageUrl:
-      "https://content.airhex.com/images/aircraft/boeing-787.png",
+    aircraftImageUrl: "/aircrafts/air-canada.png",
     aircraftReg: "C-GHPU",
     from: { code: "YYZ", city: "Toronto", timezone: "UTC-5" },
     to: { code: "YVR", city: "Vancouver", timezone: "UTC-8" },
@@ -127,8 +123,7 @@ export const FLIGTHS_DATA: FlightData[] = [
     flightNumber: "AZ610",
     airline: "ITA Airways",
     airlineIconUrl: "https://logo.clearbit.com/ita-airways.com",
-    aircraftImageUrl:
-      "https://content.airhex.com/images/aircraft/airbus-a330.png",
+    aircraftImageUrl: "/aircrafts/ita-airways.png",
     aircraftReg: "EI-DIR",
     from: { code: "FCO", city: "Rome", timezone: "UTC+1" },
     to: { code: "JFK", city: "New York", timezone: "UTC-5" },
@@ -154,8 +149,7 @@ export const FLIGTHS_DATA: FlightData[] = [
     flightNumber: "SU100",
     airline: "Aeroflot",
     airlineIconUrl: "https://logo.clearbit.com/aeroflot.ru",
-    aircraftImageUrl:
-      "https://content.airhex.com/images/aircraft/sukhoi-superjet.png",
+    aircraftImageUrl: "/aircrafts/aeroflot.png",
     aircraftReg: "RA-89012",
     from: { code: "SVO", city: "Moscow", timezone: "UTC+3" },
     to: { code: "LED", city: "Saint Petersburg", timezone: "UTC+3" },
@@ -181,8 +175,7 @@ export const FLIGTHS_DATA: FlightData[] = [
     flightNumber: "QR202",
     airline: "Qatar Airways",
     airlineIconUrl: "https://logo.clearbit.com/qatarairways.com",
-    aircraftImageUrl:
-      "https://content.airhex.com/images/aircraft/airbus-a350.png",
+    aircraftImageUrl: "/aircrafts/qatar-airways.png",
     aircraftReg: "A7-ALC",
     from: { code: "DOH", city: "Doha", timezone: "UTC+3" },
     to: { code: "SYD", city: "Sydney", timezone: "UTC+11" },
@@ -208,8 +201,7 @@ export const FLIGTHS_DATA: FlightData[] = [
     flightNumber: "EK015",
     airline: "Emirates",
     airlineIconUrl: "https://logo.clearbit.com/emirates.com",
-    aircraftImageUrl:
-      "https://content.airhex.com/images/aircraft/airbus-a380.png",
+    aircraftImageUrl: "/aircrafts/emirates.png",
     aircraftReg: "A6-EDZ",
     from: { code: "DXB", city: "Dubai", timezone: "UTC+4" },
     to: { code: "LHR", city: "London", timezone: "UTC+0" },
@@ -235,8 +227,7 @@ export const FLIGTHS_DATA: FlightData[] = [
     flightNumber: "JL002",
     airline: "Japan Airlines",
     airlineIconUrl: "https://logo.clearbit.com/jal.com",
-    aircraftImageUrl:
-      "https://content.airhex.com/images/aircraft/boeing-787.png",
+    aircraftImageUrl: "/aircrafts/japan-airlines.png",
     aircraftReg: "JA832J",
     from: { code: "HND", city: "Tokyo", timezone: "UTC+9" },
     to: { code: "LAX", city: "Los Angeles", timezone: "UTC-8" },
@@ -262,8 +253,7 @@ export const FLIGTHS_DATA: FlightData[] = [
     flightNumber: "UA459",
     airline: "United Airlines",
     airlineIconUrl: "https://logo.clearbit.com/united.com",
-    aircraftImageUrl:
-      "https://content.airhex.com/images/aircraft/boeing-737-max-8.png",
+    aircraftImageUrl: "/aircrafts/united-airlines.png",
     aircraftReg: "N37277",
     from: { code: "ORD", city: "Chicago", timezone: "UTC-6" },
     to: { code: "DEN", city: "Denver", timezone: "UTC-7" },
@@ -289,8 +279,7 @@ export const FLIGTHS_DATA: FlightData[] = [
     flightNumber: "NZ3",
     airline: "Air New Zealand",
     airlineIconUrl: "https://logo.clearbit.com/airnewzealand.com",
-    aircraftImageUrl:
-      "https://content.airhex.com/images/aircraft/boeing-777.png",
+    aircraftImageUrl: "/aircrafts/air-ew-zealand.png",
     aircraftReg: "ZK-OKN",
     from: { code: "AKL", city: "Auckland", timezone: "UTC+13" },
     to: { code: "LAX", city: "Los Angeles", timezone: "UTC-8" },

@@ -1,4 +1,8 @@
-const Header = () => {
+interface Props {
+  flightNumber: string;
+  airline: string;
+}
+export function Header({ flightNumber, airline }: Props) {
   return (
     <div
       className={
@@ -6,14 +10,12 @@ const Header = () => {
       }
     >
       <div>
-        <p className={"text-amber-300"}>RN1782</p>
-        <p className={"text-xs"}>Ryan air</p>
+        <p className={"text-amber-300"}>{flightNumber}</p>
+        <p className={"text-xs"}>{airline}</p>
       </div>
       <div>
         <button>❌</button>
       </div>
     </div>
   );
-};
-
-export default Header;
+}

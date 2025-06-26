@@ -1,23 +1,49 @@
 import FlightProgressBar from "../FlightProgressBar.tsx";
-
-const Progress = () => {
+import type { FlightProgress, FlightSchedule } from "../../type/FlightData.ts";
+interface Props {
+  schedule: FlightSchedule;
+  progress: FlightProgress;
+}
+const Progress = ({ schedule, progress }: Props) => {
+  const { arrival, departure } = schedule;
+  const {
+    completedDuration,
+    completedDistanceKm,
+    totalDuration,
+    totalDistanceKm,
+  } = progress;
   return (
-    <div className={"flex flex-col gap-y-0.5"}>
+    <div className={"flex flex-col gap-y-0.5 mb-3"}>
       <div className={"flex flex-col text-xs justify-between bg-neutral-800 "}>
-        <FlightProgressBar totalDistance={232} />
+        <div className={"py-5"}>
+          <FlightProgressBar totalDistance={totalDistanceKm} />
+        </div>
         <div className={"flex flex-row   p-2 justify-between"}>
-          <p className={"text-gray-400"}>Speed</p>
-          <p>870 km/h</p>
+          <p className={"text-gray-400"}>
+            {totalDistanceKm} km {totalDuration}
+          </p>
+          <p>
+            {completedDistanceKm} km {completedDuration}
+          </p>
         </div>
       </div>
       <div className={"flex flex-col gap-y-0.5"}>
         <div className={"flex flex-row gap-x-0.5 text-xs"}>
-          <div className={"bg-neutral-800 flex-1 p-2"}>
-            <p>Boeing 737-800</p>
+          <div
+            className={
+              "flex flex-row bg-neutral-800 rounded-bl-md flex-1 p-2 justify-between"
+            }
+          >
+            <p className={"text-gray-400"}>Schedule</p>
+            <p>{departure.planned}</p>
           </div>
-          <div className={"flex flex-row bg-neutral-800 flex-1 p-2"}>
-            <p>ICON</p>
-            <p>Ireland</p>
+          <div
+            className={
+              "flex flex-row bg-neutral-800 justify-between flex-1 p-2"
+            }
+          >
+            <p className={"text-gray-400"}> Actual</p>
+            <p>{departure.actual}</p>
           </div>
         </div>
         <div className={"flex flex-row gap-x-0.5 text-xs"}>
@@ -26,16 +52,16 @@ const Progress = () => {
               "flex flex-row bg-neutral-800 rounded-bl-md flex-1 p-2 justify-between"
             }
           >
-            <p className={"text-gray-400"}>Speed</p>
-            <p>870 km/h</p>
+            <p className={"text-gray-400"}>Schedule</p>
+            <p>{arrival.planned}</p>
           </div>
           <div
             className={
               "flex flex-row bg-neutral-800 rounded-br-md flex-1 p-2 justify-between"
             }
           >
-            <p className={"text-gray-400"}>Altitude</p>
-            <p className={"whitespace-nowrap"}>11 300 m</p>
+            <p className={"text-gray-400"}>Estimated</p>
+            <p className={"whitespace-nowrap"}>{arrival.estimated}</p>
           </div>
         </div>
       </div>

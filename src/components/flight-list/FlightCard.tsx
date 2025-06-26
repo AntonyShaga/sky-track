@@ -33,13 +33,15 @@ const FlightCard = ({ flight }: Props) => {
       >
         <div className="flex justify-between items-center mb-7">
           <div className="flex items-center gap-3">
-            <img
-              src={flight.airlineIconUrl}
-              alt={flight.airline}
-              width={40}
-              height={40}
-              className="rounded-full bg-white"
-            />
+            <div>
+              <img
+                src={flight.airlineIconUrl}
+                alt={flight.airline}
+                width={40}
+                height={40}
+                className="w-10 h-10 rounded-full bg-white object-center"
+              />
+            </div>
             <span>{flight.flightNumber}</span>
           </div>
           <div>

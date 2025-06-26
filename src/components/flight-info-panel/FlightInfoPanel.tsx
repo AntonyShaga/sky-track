@@ -1,4 +1,4 @@
-import Header from "./Header.tsx";
+import { Header } from "./Header.tsx";
 import Route from "./Route.tsx";
 import Progress from "./Progress.tsx";
 import { useSearchParams } from "react-router-dom";
@@ -15,14 +15,25 @@ const FlightInfoPanel = () => {
   }
 
   return (
-    <div
-      className={"bg-neutral-900 rounded-xl w-sm sticky top-10 "}
-      style={{ height: "calc(100vh - 40px)" }}
-    >
-      <Header />
-      <div className={" p-5 "}>
+    <div className={"bg-neutral-900 rounded-xl w-sm sticky top-10 h-fit"}>
+      <div
+        className={"rounded-xl"}
+        style={{
+          height: "520px",
+          backgroundImage: `url(${flight.aircraftImageUrl})`,
+          backgroundSize: "100% auto",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "top left",
+        }}
+      >
+        <div className={"p-3"}>
+          <Header airline={flight.airline} flightNumber={flight.flightNumber} />
+        </div>
+      </div>
+
+      <div className={" p-3 "}>
         <Route fromInfo={flight.from} toInfo={flight.to} />
-        <Progress />
+        <Progress schedule={flight.schedule} progress={flight.progress} />
         <FlightInfo
           speed={flight.speed}
           altitude={flight.altitude}
