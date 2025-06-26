@@ -9,12 +9,12 @@ export const FLIGTHS_DATA: FlightData[] = [
     aircraftReg: "UR-SKY",
     from: {
       code: "IEV",
-      city: "Київ",
+      city: "Kiev",
       timezone: "UTC+2",
     },
     to: {
       code: "LWO",
-      city: "Львів",
+      city: "Lviv",
       timezone: "UTC+2",
     },
     progress: {

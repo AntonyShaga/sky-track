@@ -1,14 +1,12 @@
 import { FLIGTHS_DATA } from "./fligths.data.ts";
 import FlightCard from "./FlightCard.tsx";
 
-const FlightListCard = () => {
+export function FlightListCard() {
   return (
-    <div className={"w-sm space-y-4 min-w-fit"}>
+    <div className="w-sm  space-y-4 min-w-fit max-h-screen ">
       {FLIGTHS_DATA.map((flight) => (
         <FlightCard key={flight.airline} flight={flight} />
       ))}
     </div>
   );
-};
-
-export default FlightListCard;
+}
