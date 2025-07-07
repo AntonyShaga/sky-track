@@ -1,10 +1,11 @@
-import { Header } from "./Header.tsx";
-import Route from "./Route.tsx";
+import FlightRoute from "./FlightRoute.tsx";
 import { Progress } from "./Progress.tsx";
 import { useSearchParams } from "react-router-dom";
 import { QUERY_PARAM_FLIGHT } from "../flight-list/flights.constans.ts";
 import { FLIGTHS_DATA } from "../flight-list/fligths.data.ts";
 import { FlightInfo } from "./FlightInfo.tsx";
+import { FlightHeader } from "./FlightHeader.tsx";
+import { FlightImage } from "./FlightImage.tsx";
 
 export function FlightInfoPanel() {
   const [searchParams] = useSearchParams();
@@ -15,24 +16,22 @@ export function FlightInfoPanel() {
   }
 
   return (
-    <div className={"bg-neutral-900 rounded-xl w-sm sticky top-10 h-fit"}>
-      <div
-        className={"rounded-xl"}
-        style={{
-          height: "520px",
-          backgroundImage: `url(${flight.aircraftImageUrl})`,
-          backgroundSize: "100% auto",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "top left",
-        }}
-      >
-        <div className={"p-3"}>
-          <Header airline={flight.airline} flightNumber={flight.flightNumber} />
-        </div>
-      </div>
+    <aside
+      className={
+        "absolute w-sm top-1/2 -translate-y-1/2 right-7 rounded-xl overflow-hidden bg-[#101010]"
+      }
+    >
+      <FlightHeader
+        airline={flight.airline}
+        flightNumber={flight.flightNumber}
+      />
+      <FlightImage
+        airline={flight.airline}
+        flightImg={flight.aircraftImageUrl}
+      />
 
       <div className={" p-3 "}>
-        <Route fromInfo={flight.from} toInfo={flight.to} />
+        <FlightRoute fromInfo={flight.from} toInfo={flight.to} />
         <Progress schedule={flight.schedule} progress={flight.progress} />
         <FlightInfo
           speed={flight.speed}
@@ -40,6 +39,6 @@ export function FlightInfoPanel() {
           aircraft={flight.aircraft}
         />
       </div>
-    </div>
+    </aside>
   );
 }

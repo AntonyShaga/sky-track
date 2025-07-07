@@ -15,7 +15,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
+@theme inline {
+  --spacing-element: calc(var(--spacing) * 6);
+}
 
 body {
   margin: 0;
@@ -23,4 +25,8 @@ body {
   min-height: 100vh;
   font-family: "JetBrains Mono", monospace;
   font-optical-sizing: auto;
+}
+
+button {
+  @apply cursor-pointer;
 }
