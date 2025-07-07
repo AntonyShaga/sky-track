@@ -10,7 +10,7 @@ export function InfoBox({ label, value, className = "" }: InfoBoxProps) {
       className={`flex items-center p-mini-element justify-between bg-neutral-800  ${className}`}
     >
       {label ? <p className="text-gray-400">{label}</p> : null}
-      <p>{value}</p>
+      <div>{value}</div>
     </div>
   );
 }

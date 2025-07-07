@@ -1,4 +1,3 @@
-import { Icon } from "@iconify/react";
 import { emojiToCountryCode } from "../../utils/emojiToCountryCode.ts";
 
 type CountryFlagProps = {
@@ -7,5 +6,12 @@ type CountryFlagProps = {
 
 export function CountryFlag({ code }: CountryFlagProps) {
   const flagEmoji = emojiToCountryCode(code);
-  return <Icon icon={`cif:${flagEmoji.toLowerCase()}`} />;
+  return (
+    <img
+      src={`https://api.iconify.design/cif:${flagEmoji.toLowerCase()}.svg`}
+      alt={`${code} flag`}
+      width={24}
+      height={24}
+    />
+  );
 }
