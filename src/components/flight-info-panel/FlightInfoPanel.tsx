@@ -6,6 +6,7 @@ import { FLIGTHS_DATA } from "../flight-list/fligths.data.ts";
 import { FlightInfo } from "./FlightInfo.tsx";
 import { FlightHeader } from "./FlightHeader.tsx";
 import { FlightImage } from "./FlightImage.tsx";
+import { FlightActions } from "./FlightActions.tsx";
 
 export function FlightInfoPanel() {
   const [searchParams] = useSearchParams();
@@ -38,6 +39,7 @@ export function FlightInfoPanel() {
           altitude={flight.altitude}
           aircraft={flight.aircraft}
         />
+        <FlightActions />
       </div>
     </aside>
   );
