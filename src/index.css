@@ -17,6 +17,7 @@
 
 @theme inline {
   --spacing-element: calc(var(--spacing) * 6);
+  --spacing-mini-element: calc(var(--spacing) * 3);
 }
 
 body {

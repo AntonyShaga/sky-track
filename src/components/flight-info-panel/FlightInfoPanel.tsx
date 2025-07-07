@@ -32,7 +32,7 @@ export function FlightInfoPanel() {
 
       <div className={" p-3 "}>
         <FlightRoute fromInfo={flight.from} toInfo={flight.to} />
-        <Progress schedule={flight.schedule} progress={flight.progress} />
+        <Progress schedule={flight.schedule} />
         <FlightInfo
           speed={flight.speed}
           altitude={flight.altitude}

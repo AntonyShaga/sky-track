@@ -12,26 +12,26 @@ export function FlightInfo({ speed, altitude, aircraft }: Props) {
   const { model, countryFlag, country } = aircraft;
 
   return (
-    <div className="flex flex-col gap-y-0.5">
-      <h3 className="bg-neutral-700 rounded-t-md p-1 text-xs">
+    <div className="my-3.5">
+      <div className="bg-[#282828] mb-1 font-medium p-mini-element rounded-t-xl">
         Flight information
-      </h3>
+      </div>
 
-      <div className="flex gap-x-0.5 text-xs">
+      <div className="grid grid-cols-2 gap-1 mb-1">
         <InfoBox value={model} />
         <InfoBox
           value={
             <div className="flex items-center gap-2">
-              <span className="w-6 h-6 flex items-center">
+              <div className="w-6 h-6 flex items-center">
                 <CountryFlag code={countryFlag} />
-              </span>
-              {country}
+              </div>
+              <span>{country}</span>
             </div>
           }
         />
       </div>
 
-      <div className="flex gap-x-0.5 text-xs">
+      <div className="grid grid-cols-2 gap-1 mb-1">
         <InfoBox label="Speed" value={speed} className="rounded-bl-md" />
         <InfoBox label="Altitude" value={altitude} className="rounded-br-md" />
       </div>
