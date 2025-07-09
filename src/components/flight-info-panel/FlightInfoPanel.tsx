@@ -19,7 +19,7 @@ export function FlightInfoPanel() {
   return (
     <aside
       className={
-        "absolute w-sm top-1/2 -translate-y-1/2 right-7 rounded-xl overflow-hidden bg-[#101010]"
+        "absolute w-sm top-7  right-7 rounded-xl overflow-hidden bg-[#101010]"
       }
     >
       <FlightHeader

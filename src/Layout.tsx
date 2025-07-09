@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
-import { ThemeToggle } from "./components/ThemeToggle.tsx";
+import { Header } from "./components/header/Header.tsx";
 
 export function Layout() {
   return (
     <div className={"relative p-7"}>
-      <ThemeToggle />
+      <Header />
       <Outlet />
     </div>
   );
